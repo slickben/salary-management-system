@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/form.css">
+    <link rel="stylesheet" href="/public/user.css">
+</head>
+<body>
+    <h1>Search Your Profile</h1>
+    <form class="form-control" id="search-form">
+        <input type="search" name="id" id="search" placeholder="Enter Your Id">
+    </form> 
+    <section id="User" class="grid">
+            
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p></p> -->
+            <form class="form-control">
+                <label for="loan">Loan Amount</label>
+                <input type="number" name="loan" id="loanAmt">
+                <label for="id">enter you id</label>
+                <input type="number" name="id" id="userId">
+                <button type="submit" id="loanBtn" class="btn">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="/src/User/user.js"></script>
+    <!-- <script src="/src/app.js"></script> -->
+</body>
+</html>
