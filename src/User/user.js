@@ -1,4 +1,10 @@
 
+
+//user id
+
+let userId;
+
+
 //initialize user object
 class User  {
     constructor(name, email, id, sex, imag, position, salary){
@@ -15,8 +21,8 @@ class User  {
         let loanDetails = []
         users.map( user => {
             if(user.id === userId){
-                loanDetails.push(user, loanAmt)
-                localStorage.setItem('loanDetails', loanDetails)
+                loanDetails.push({...user, loanAmt})
+                localStorage.setItem('loanDetails', JSON.stringify(loanDetails))
             }
         })
         
@@ -45,6 +51,7 @@ document.getElementById('search-form').addEventListener('submit', function (e)  
     const dispUser = document.getElementById('User')
     users.map( (user) => {
         if(filter == user.id){
+            userId = user.id
             dispUser.innerHTML = `
             <acticle class="card User-item">
                 <header class="user__header">
@@ -57,7 +64,7 @@ document.getElementById('search-form').addEventListener('submit', function (e)  
                     <li>EMAIL:<span>${user.email}</span></li>
                     <li>SEX:<span>${user.sex}</span></li>
                     <li>POSITION:<span>${user.position}</span></li>
-                    <li style="background-color: white ;border: none"><button id="showModal" onclick="displayFunc()">Click here if you want to take loan</button></li>
+                    <li style="background-color: white ;border: none"><button id="showModal" value="${user.id}" onclick="displayFunc()">Click here if you want to take loan</button></li>
                 </ul>
             </acticle>
         `
@@ -82,10 +89,12 @@ span.addEventListener('click', () => {
 })
 
 // Submit loan Handler
-document.getElementById("loanBtn").addEventListener('submit', () => {
+document.getElementById("loanBtn").addEventListener('submit', (e) => {
+    e.preventDefault()
     let loanAmt = document.getElementById('loanAmt').value
-    let userId = document.getElementById('userId').value
-    User.SaveLoan(loanAmt, users,)
+    console.log(userId)
+    User.SaveLoan(loanAmt, userId, users,)
+    
 })
 // export const functiony = () => {
 
