@@ -1,9 +1,6 @@
-
-
 //user id
 
 let userId;
-
 
 //initialize user object
 class User  {
