@@ -41,6 +41,10 @@
     top: 24%;
 }
 
+.loan{
+    margin-left: 25%;
+    width: 40%
+}
 
 .list-group .decline{
     background-color: darkorange;

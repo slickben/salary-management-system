@@ -17,9 +17,17 @@ class User  {
     static SaveLoan = (loanAmt, userId, users) =>  {
         let loanDetails = []
         users.map( user => {
-            if(user.id === userId){
-                loanDetails.push({...user, loanAmt})
-                localStorage.setItem('loanDetails', JSON.stringify(loanDetails))
+            if(user.id === userId){    
+                if(localStorage.getItem('loanDetails') === null){
+                    loanDetails.push({...user, loanAmt})
+                    localStorage.setItem('loanDetails', JSON.stringify(loanDetails))
+                }else{
+                    let loanDetails = JSON.parse(localStorage.getItem("loanDetails"));
+                    loanDetails.push({...user, loanAmt})
+                    localStorage.setItem('loanDetails', JSON.stringify(loanDetails))
+
+                }
+                
             }
         })
         
@@ -91,6 +99,7 @@ document.getElementById("loanBtn").addEventListener('submit', (e) => {
     let loanAmt = document.getElementById('loanAmt').value
     console.log(userId)
     User.SaveLoan(loanAmt, userId, users,)
+    loanAmt.value = 0
     
 })
 // export const functiony = () => {
