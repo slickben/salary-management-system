@@ -1,0 +1,48 @@
+.list-group{
+    width: 100%;
+}
+
+.list-group li{
+    list-style: none;
+    border: 1px solid rgba(94, 79, 79, 0.329);
+    padding: 4px 10px;
+    margin-left: -300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.904);
+}
+
+.list-group li span{
+    list-style: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.13);
+    padding: 4px 10px;
+    
+}
+
+.list-group li .btn{
+    border: none
+}
+
+.list-group button{
+    padding: 5px 40px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(58, 5, 5);
+    text-transform: capitalize;
+}
+
+.list-group .approve{
+    background: green;
+    color: white
+}
+
+.action-btn{
+    display: none;
+    position: absolute;
+    left: 60%;
+    top: 24%;
+}
+
+
+.list-group .decline{
+    background-color: darkorange;
+    color: white
+}
