@@ -9,7 +9,8 @@ class Admin {
     logIn = (email, password) => {
         //velidate Admin
         if(email === this.email && password === this.password){
-            window.open("/view/index.html")
+            window.location.replace ("/view/index.html")
+           this.isLogin = true
         }else{
             return
         }
@@ -17,7 +18,7 @@ class Admin {
     }
 
     logOut = () => {
-        window.open("/view/login.html")
+        window.location.replace('/view/login.html')
     }
 }
 
@@ -25,10 +26,16 @@ let admin = new Admin("benson momodu", "benson.isaac.momodu@gmail.com", "@benson
 
 //Events
 
+// login handler
 document.getElementById("login-form").addEventListener("submit", (e) => {
     e.preventDefault()
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
     console.log(email, typeof password)
     admin.logIn(email, password)
+})
+
+// logout handler
+document.getElementById("logout").addEventListener("click", () => {
+    admin.logOut()
 })
