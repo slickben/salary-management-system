@@ -108,12 +108,12 @@ document.getElementById("loanBtn").addEventListener('submit', (e) => {
         // console.log(loans.length == 0)
         let filterAndCheckIfHasPendingLoan = loans.filter( loan => { 
             let pendingLoan;
-            if(loan.id === userId){
+            if(loan.id === userId & !loan.declined){
                 pendingLoan =  loan
             }
             return pendingLoan
         })
-        console.log(filterAndCheckIfHasPendingLoan)
+        // console.log(filterAndCheckIfHasPendingLoan)
         // console.log(loans)
         if(filterAndCheckIfHasPendingLoan.length == 0){
             Store.SaveLoan(loanAmt, userId, users,)
@@ -122,8 +122,8 @@ document.getElementById("loanBtn").addEventListener('submit', (e) => {
             document.getElementById("success").style.display = "block"
         }else {
             filterAndCheckIfHasPendingLoan.map( loan =>{
-                if(loan.id === userId){
-                    console.log(`pay your loan`)
+                if(loan.approved || loan.pending){
+                    // console.log(`pay your loan`)
                     document.getElementById("loanBtn").style.display = "none"
                     document.getElementById("success").style.display = "block"
                     document.getElementById("success").innerText = ` Dear ${loan.name} You still some loan please pay before you make another`
