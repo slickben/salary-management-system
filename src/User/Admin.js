@@ -9,7 +9,7 @@ class Admin {
     logIn = (email, password) => {
         //velidate Admin
         if(email === this.email && password === this.password){
-            window.location.replace ("/view/index.html")
+            window.location.replace("/view/index.html")
            this.isLogin = true
         }else{
             return
@@ -31,7 +31,6 @@ document.getElementById("login-form").addEventListener("submit", (e) => {
     e.preventDefault()
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
-    console.log(email, typeof password)
     admin.logIn(email, password)
 })
 

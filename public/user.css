@@ -122,6 +122,13 @@
     border: 1px solid #888;
     width: 30%;
   }
+
+  .modal-content p {
+    display: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+  }
   
   /* The Close Button */
   .close {

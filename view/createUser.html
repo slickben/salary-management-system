@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="/public/form.css">
     <link rel="stylesheet" href="/public/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
@@ -24,27 +25,48 @@
     <main>
         <section>
             <header class="top-header">
-                <li>benson.isaac.momodu@gmail.com</li>
+                <li>Create new user</li>
                 <li><a  id="logout" ><i class="far fa-user-circle"></i>logout</a></li>
             </header>
         </section>
          <section class="grid">
-            <article class="card product-item">
-                <header class="card__header">
-
-                </header>
-                <div class="card__image">
-                    <img src="" alt="">
-                </div>
-                <div class="card__content">
-
-                </div>
-                
-            </article>
+            <div>
+                <form action="" class="form-control">
+                    <label for="">Full Name</label><br>
+                    <input type="text"  id="name"><br>
+                    <label for="">Email</label><br>
+                    <input type="email"  id="email"><br>
+                    <label for="">ID</label><br>
+                    <input type="number"  id="id"><br>
+                    <label for="">Sex</label>
+                    <div>
+                        <input type="radio"  value="male" id="gender-male">  male
+                        <input type="radio" value="female" id="gender-female"> female <br>
+                    </div>
+                    <label for="">Position</label><br>
+                    <input type="text"  id="position"><br>
+                    <label for="">Salary</label><br>
+                    <input type="number" id="salary">
+                    <input type="button" value="Submit" class="btn" id="btn">
+                </form>
+            </div>
 
         </section> 
        
     </main>
-    <script src="/src/User/Admin.js"></script>
+    <script src="/src/User/createUser.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
 </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/public/main.css">
     <link rel="stylesheet" href="/public/user.css">
     <link rel="stylesheet" href="/public/loan.css">
@@ -24,23 +28,17 @@
                 </li>
                 <li class="main-header_item"><a href="/view/userProfile.html"><i class="fas fa-user-alt"></i>Profile</a></li>
                 <li class="main-header_item"><a href="#"><i class="fas fa-sync-alt"></i>Update</a></li>
-                <li class="main-header_item"><a href="#"><i class="fas fa-sync-alt"></i>Create User</a></li>
             </ul>
         </nav>
     </header>
+    <div style="margin-left: 25%; padding: 20px 0; font-weight: 900">
+        <h3>List Of Declined Loan</h3>
+    </div>
     <main>
-        <section>
-            <header class="top-header">
-                <li>Check if there any pending loan</li>
-                <li><input type="button" id="view"></li>
-                <li><input type="button" value="View Pending Loan" id="view-loan"></li>
-                <!-- <li><a href="#"><i class="far fa-user-circle"></i>login</a></li> -->
-            </header>
-        </section>
-        <section id="Loan" class="loan">
+        <section id="declined" class="grid">
             
         </section>
     </main>
-    <script src="/src/User/loan.js"></script>
+    <script src="/src/User/declineLoan.js"></script>
 </body>
 </html>
